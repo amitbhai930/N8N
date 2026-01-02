@@ -1,0 +1,18 @@
+name: Wake and Trigger n8n
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake service
+        run: |
+          curl -m 30 https://your-app.onrender.com || true
+
+      - name: Trigger n8n workflow
+        run: |
+          curl -X POST https://your-app.onrender.com/webhook/your-webhook-id
