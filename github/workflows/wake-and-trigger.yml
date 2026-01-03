@@ -15,4 +15,4 @@ jobs:
 
       - name: Trigger n8n workflow
         run: |
-          curl -X POST https://n8n-4yvw.onrender.com/
+          curl -X POST https://n8n-4yvw.onrender.com > /dev/null
