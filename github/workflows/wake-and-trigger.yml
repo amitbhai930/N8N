@@ -15,4 +15,4 @@ jobs:
 
       - name: Trigger n8n workflow
         run: |
-          curl -X POST https://your-app.onrender.com/webhook/your-webhook-id
+          curl -X POST https://n8n-4yvw.onrender.com/
