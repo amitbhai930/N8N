@@ -9,10 +9,10 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - name: Wake service
+      - name: Wake n8n service
         run: |
-          curl -m 30 https://your-app.onrender.com || true
+          curl -m 30 https://n8n-4yvw.onrender.com || true
 
       - name: Trigger n8n workflow
         run: |
-          curl -X POST https://n8n-4yvw.onrender.com > /dev/null
+          curl -X POST https://n8n-4yvw.onrender.com/webhook/run-job
